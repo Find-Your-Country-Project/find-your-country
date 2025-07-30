@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Vremena Grotesk Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Vremena Grotesk Medium"),
+    url("fonts/VremenaGroteskMedium.woff") format("woff");
+}
+
 body {
-    background-color: rgb(230, 244, 252);
+  background-color: rgb(230, 244, 252);
+  font-family: "Vremena Grotesk Medium";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
