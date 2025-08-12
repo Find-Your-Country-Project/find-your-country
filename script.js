@@ -1,3 +1,9 @@
 "use strict";
 console.log("JavaScript Connect!");
-console.log("work");
+
+
+fetch("https://restcountries.com/")
+    .then (data => console.log(data))
+    .catch(error => console.error("No Work!"))
+
+
