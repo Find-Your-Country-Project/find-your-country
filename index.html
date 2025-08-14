@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find Your Country</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
     <link rel='icon' type='image/x-icon' href='img/favicon.ico'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
   </head>
   <body>
     <div class="title">
@@ -14,20 +17,38 @@
       <h1 class="titleText">Find Your Country 🌍</h1>
       <p class="titleDescr">Explore countries around the world and test your geography knowledge!</p>
     </div>
+    
     <div class="searchBar">
       <div class="searchIcon"></div>
-      <input type="text" class="searcher" placeholder="Somalia">
+      <i class="fas fa-search search-icon"></i>
+      <input id = "inputSearch" type="text" class="searcher" placeholder="Somali">
+    </div>
+       <div id="main-container">
+      
+        
+      </div>
+    </div>
+    <div id="info-container">
+     <div id="flag-container"><img id = "flagImage" src="images" alt="flag Image"></div>
+     <P><i class="material-icons">&#xe7f1;</i> Capital:<span id="capital"></span></P>
+     <P><i class="material-icons">&#xe7fb;</i> Population: <span id="population"></span></P>
+      <P> </P><i style="font-size:24px" class="fa">&#xf1ab;</i> Languages: <span id="languages"></span></P>
+      <P><i style="font-size:24px" class="fa">&#xf0d6;</i> Currencies: <span id="currencies"></span></P>
+      <P><i class="material-icons">&#xe55c;</i> View on Maps: <span id="mapslink"></span></P>
     </div>
     <div class="searchItems"></div>
     <div class="guessGame">
+      
       <h2 class="guessTitle">Guess the Country! 🎮</h2>
       <img src="" alt="" class="countryFlag">
       <input type="text" class="enterGuess" placeholder="Enter your guess!">
       <div class="guessBTNs">
         <button class="submitBTN">➤ Submit Guess!</button>
         <button class="hintBTN">❓ Hint</button>
-      </div>
+            
       <div class="redoBTN">Try Another Country</div>
-    </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    
   </body>
 </html>
