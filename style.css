@@ -22,8 +22,18 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-direction: column
 }
 
+.find {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+}
 #info-container strong {
   color: #0077cc;
 }
@@ -36,7 +46,20 @@ body {
 #info-container a:hover {
   text-decoration: underline;
 }
-/*
+
+.searchBar {
+  background-color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+.searcher {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+
+}
+
 
 #info-container {
   background-color: #f9f9f9; 
@@ -193,6 +216,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-direction: column;
 }
 
 #info-container strong {
@@ -207,6 +231,17 @@ button:hover {
 #info-container a:hover {
   text-decoration: underline;
 }
+
+#flag-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#flagImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /*
 
 #info-container {
@@ -214,7 +249,7 @@ button:hover {
   border: 1px solid #ccc;    
   border-radius: 8px;        
   padding: 20px;             
-  margin: 20px auto;         
+  margin: 20px auto;          
   max-width: 600px;        
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
   font-size: 18px;           

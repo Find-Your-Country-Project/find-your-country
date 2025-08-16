@@ -79,103 +79,11 @@ document.querySelector('button').addEventListener('click', () => {
 });
 
 
-document.querySelector('button').addEventListener('click', () => {
-  const userGuess = document.querySelector('input').value.trim();
-
-  fetch(`https://restcountries.com/v3.1/name/${userGuess}`)
-    .then(res => res.json())
-    .then(data => {
-      const country = data[0];
-
-      // Extract data
-      const name = country.name.common;
-      const capital = country.capital?.[0] || 'N/A';
-      const population = country.population.toLocaleString();
-      const languages = Object.values(country.languages || {}).join(', ');
-      const currencies = Object.values(country.currencies || {})
-        .map(c => c.name)
-        .join(', ');
-      const mapLink = country.maps.googleMaps;
-      const flagUrl = country.flags.svg;
-
-      // Update content
-      const infoContainer = document.getElementById('info-container');
-      infoContainer.innerHTML = `
-        <h2>${name}</h2>
-        <p>🌆 Capital: ${capital}</p>
-        <p>👥 Population: ${population}</p>
-        <p>🗣 Languages: ${languages}</p>
-        <p>💰 Currencies: ${currencies}</p>
-        <p>🗺 <a href="${mapLink}" target="_blank">View on Maps</a></p>
-        <img src="${flagUrl}" alt="${name} Flag" style="width: 150px; margin-top: 10px;" />
-      `;
-    })
-    .catch(err => {
-      console.error('Error fetching country data:', err);
-      alert('Country not found. Try again!');
-    });
-});
 
 
 
-async function getCountryDetails(countryName) {
-  try {
-    const res = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
-    const data = await res.json();
-    const country = data[0];
 
-    return {
-      name: country.name.common,
-      capital: country.capital?.[0],
-      population: country.population,
-      languages: Object.values(country.languages).join(', '),
-      currency: Object.keys(country.currencies).join(', '),
-      mapsLink: country.maps.googleMaps
-    };
-  } catch (error) {
-    console.error("Country fetch failed:", error);
-    return null;
-  }
-}
 
-async function getUserCountryByIP() {
-  try {
-    const res = await fetch('https://ipapi.co/json/');
-    const data = await res.json();
-    return data.country_name;
-  } catch (error) {
-    console.error("IP lookup failed:", error);
-    return null;
-  }
-}
-async function checkGuess(userGuess) {
-  const actualCountry = await getUserCountryByIP();
-  const guessDetails = await getCountryDetails(userGuess);
-
-  if (!guessDetails) {
-    feedback.textContent = "❌ Couldn't find that country.";
-    feedback.className = "incorrect";
-    return;
-  }
-
-  if (userGuess.toLowerCase() === actualCountry.toLowerCase()) {
-    feedback.textContent = `🎉 Correct! You're in ${actualCountry}.`;
-    feedback.className = "correct";
-  } else {
-    feedback.textContent = `❌ Nope! You're in ${actualCountry}, not ${userGuess}.`;
-    feedback.className = "incorrect";
-  }
-
-  // Optionally update UI with country details
-  document.getElementById('info-container').innerHTML = `
-    <p>🌍 Country: ${guessDetails.name}</p>
-    <p> Capital: ${guessDetails.capital}</p>
-    <p> Population: ${guessDetails.population.toLocaleString()}</p>
-    <p> Languages: ${guessDetails.languages}</p>
-    <p> Currencies: ${guessDetails.currency}</p>
-    <p> <a href="${guessDetails.mapsLink}" target="_blank">View on Maps</a></p>
-  `;
-}
 async function getRandomCountry() {
   try {
     const res = await fetch('https://restcountries.com/v3.1/all');
