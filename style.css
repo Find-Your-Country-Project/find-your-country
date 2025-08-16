@@ -6,18 +6,243 @@
     url("fonts/VremenaGroteskMedium.woff") format("woff");
 }
 
+  html, body {
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
 body {
   background-color: rgb(230, 244, 252);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Vremena Grotesk Medium";
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#info-container strong {
+  color: #0077cc;
+}
+
+#info-container a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#info-container a:hover {
+  text-decoration: underline;
+}
+/*
+
+#info-container {
+  background-color: #f9f9f9; 
+  border: 1px solid #ccc;    
+  border-radius: 8px;        
+  padding: 20px;             
+  margin: 20px auto;         
+  max-width: 600px;        
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  font-size: 18px;           
+  color: #333;              
+}
+#info-container p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+#info-container strong {
+  color: #0077cc; /* Highlight key labels */
+}
+
+
+/*#info-container select {
+  display: block;
+  margin: 20px auto;
+  padding: 5px;
+  min-width: 100%;
+  color: #333;
+  font-size: 15px;
+  font-weight: 900;
+  text-align-last: center;
+}
+#info-container p {
+  padding: 0 10px;
+  font-weight: 600;
   align-items: center;
 }
+#info-container p span {
+  font-weight: normal;
+  align-items: center;
+  text-align: center;
+        
+}*/
+@media (max-width: 768px) {
+body {
+  background-color: rgb(230, 244, 260);
+  font-family: Inter, System-ui, Avenir, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;        
+  justify-content: flex-start;
+  font-size: 16px;            
+  box-sizing: border-box;
+}}
+
+/*@media (max-width: 768px) {
+  body {
+    font-size: 12px; 
+  }
+  #main-container {width: 342px; }
+  #flag-container {height: 172px; }
+  #info-container select { font-size: 15px; font-weight: 600;}
+}
+  */
+button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+#info-container p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+#info-container strong {
+  color: #0077cc;
+}
+
+#info-container a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#info-container a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  #info-container {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+.hint-btn,
+.try-another-btn {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 8px 5px;
+}
+
+.hint-btn:hover {
+  background-color: #e38b3d;
+}
+
+.try-another-btn {
+  background-color: #2a9d8f;
+}
+
+.try-another-btn:hover {
+  background-color: #21867a;
+}
+#feedback-message {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+}
+
 
 .title {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#info-container strong {
+  color: #0077cc;
+}
+
+#info-container a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#info-container a:hover {
+  text-decoration: underline;
+}
+/*
+
+#info-container {
+  background-color: #f9f9f9; 
+  border: 1px solid #ccc;    
+  border-radius: 8px;        
+  padding: 20px;             
+  margin: 20px auto;         
+  max-width: 600px;        
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  font-size: 18px;           
+  color: #333;              
+}
+#info-container p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+#info-container strong {
+  color: #0077cc; /* Highlight key labels */
+}
+
+
+/*#info-container select {
+  display: block;
+  margin: 20px auto;
+  padding: 5px;
+  min-width: 100%;
+  color: #333;
+  font-size: 15px;
+  font-weight: 900;
+  text-align-last: center;
+}
+#info-container p {
+  padding: 0 10px;
+  font-weight: 600;
   align-items: center;
 }
 
