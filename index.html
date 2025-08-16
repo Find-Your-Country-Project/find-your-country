@@ -12,23 +12,20 @@
         
   </head>
   <body>
+    
     <div class="title">
       <p class="emoji">🌐</p>
       <h1 class="titleText">Find Your Country 🌍</h1>
       <p class="titleDescr">Explore countries around the world and test your geography knowledge!</p>
     </div>
-    
+    <div class="find">
     <div class="searchBar">
       <div class="searchIcon"></div>
       <i class="fas fa-search search-icon"></i>
       <input id = "inputSearch" type="text" class="searcher" placeholder="Somali">
     </div>
-       <div id="main-container">
-      
-        
-      </div>
-    </div>
-    <div id="info-container">
+
+      <div id="info-container">
      <div id="flag-container"><img id = "flagImage" src="images" alt="flag Image"></div>
      <P><i class="material-icons">&#xe7f1;</i> Capital:<span id="capital"></span></P>
      <P><i class="material-icons">&#xe7fb;</i> Population: <span id="population"></span></P>
@@ -36,6 +33,8 @@
       <P><i style="font-size:24px" class="fa">&#xf0d6;</i> Currencies: <span id="currencies"></span></P>
       <P><i class="material-icons">&#xe55c;</i> View on Maps: <span id="mapslink"></span></P>
     </div>
+  </div>
+  <div> 
     <div class="searchItems"></div>
     <div class="guessGame">
       
@@ -47,6 +46,7 @@
         <button class="hintBTN">❓ Hint</button>
             
       <div class="redoBTN">Try Another Country</div>
+      </div>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
     
