@@ -55,7 +55,7 @@ body {
 }
 
 #info-container strong {
-  color: #0077cc; /* Highlight key labels */
+  color: #0077cc; // Highlight key labels 
 }
 
 
@@ -226,7 +226,7 @@ button:hover {
 }
 
 #info-container strong {
-  color: #0077cc; /* Highlight key labels */
+  color: #0077cc; // Highlight key labels 
 }
 
 
@@ -266,6 +266,7 @@ button:hover {
   
   
 }
+*/
 
 .guessGame {
   /* position: absolute;
