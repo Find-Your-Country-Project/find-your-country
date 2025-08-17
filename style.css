@@ -6,7 +6,8 @@
     url("fonts/VremenaGroteskMedium.woff") format("woff");
 }
 
-  html, body {
+html,
+body {
   box-sizing: border-box;
   padding: 20px;
   margin: 0;
@@ -22,6 +23,29 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#info-container {
+  background-color: white;
+  padding: 1em 4em;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.15);
+  margin: 5vh 5vw;
+  width: 40vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #info-container strong {
@@ -80,22 +104,23 @@ body {
   text-align: center;
         
 }*/
-@media (max-width: 768px) {
-body {
-  background-color: rgb(230, 244, 260);
-  font-family: Inter, System-ui, Avenir, Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #333;
-  display: flex;              
-  flex-direction: column;     
-  align-items: center;        
-  justify-content: flex-start;
-  font-size: 16px;            
-  box-sizing: border-box;
-}}
+/* @media (max-width: 768px) {
+  body {
+    background-color: rgb(230, 244, 260);
+    font-family: Inter, System-ui, Avenir, Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+} */
 
 /*@media (max-width: 768px) {
   body {
@@ -188,11 +213,59 @@ button:hover {
   color: red;
 }
 
-
 .title {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-bottom: 0;
+}
+
+.emoji {
+  font-size: 1.5rem;
+  margin: 0.1rem;
+}
+
+.titleText {
+  font-size: 2.1rem;
+  margin: 1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 900;
+}
+
+.titleDescr {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(44, 44, 44);
+  margin: 0 0.5vw 3vh;
+}
+
+.searchBar {
+  width: 40vw;
+  height: 5vh;
+  margin: 0.1vh 1vw;
+  border: 2px solid rgba(0, 0, 0, 0.219);
+  padding: 0.2em 1em;
+  border-radius: 1em;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#inputSearch {
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 5vh;
+  width: 35vw;
+}
+
+.searchIcon {
+  height: 3.5vh;
+  width: 1.6vw;
+  margin-right: 2vw;
 }
 
 #info-container strong {
@@ -207,6 +280,11 @@ button:hover {
 #info-container a:hover {
   text-decoration: underline;
 }
+
+#flagImage {
+
+}
+
 /*
 
 #info-container {
@@ -245,27 +323,6 @@ button:hover {
   font-weight: 600;
   align-items: center;
 }
-
-.emoji {
-  font-size: 2rem;
-  margin: 0.2rem;
-}
-
-.titleText {
-  font-size: 2.5rem;
-  margin: 1rem;
-  letter-spacing: 0.1rem;
-  font-weight: 900;
-}
-
-.titleDescr {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: rgb(44, 44, 44);
-  margin: 0 0.5vw 5vh;
-  
-  
-}
 */
 
 .guessGame {
@@ -284,7 +341,7 @@ button:hover {
   align-items: center;
 }
 
-.guessGame> * {
+.guessGame > * {
   font-weight: 600;
   border-radius: 0.2em;
   border: none;
